@@ -20,7 +20,7 @@ const User = () => {
       {/* app/user/ */}
       {/* //! the problem here is that we need the /user to be private or take the id as input */}
       <Route path="/" element={ <NavbarAndPages /> }>
-        <Route path="/:id" element = { <Profile />} />
+        <Route path="/:userId" element = { <Profile />} />
       </Route>
       <Route path="/signup" element= {<Signup />}/>
       <Route path="/signin" element = {<Signin />}/>
