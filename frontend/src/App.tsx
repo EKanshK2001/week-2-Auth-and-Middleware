@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import User from "./components/User";
+import User from "./routes/User";
+import Pages from "./routes/Pages";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
 
     <Routes>
       {/* app/ */}
+      <Route path="/*" element= {<Pages />}/>
       <Route path="/user/*" element = {<User />} />
     </Routes>
       
