@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import { NavbarAndPages } from "./Navbar";
-import { Home } from "../pages/Home";
 import { Profile } from "../pages/Profile";
 import { Signup } from "../pages/Signup";
 import { Signin } from "../pages/Signin";
@@ -20,7 +19,7 @@ const User = () => {
       {/* app/user/ */}
       {/* //! the problem here is that we need the /user to be private or take the id as input */}
       <Route path="/" element={ <NavbarAndPages /> }>
-        <Route path="/:userId" element = { <Profile />} />
+        <Route path="/" element = { <Profile />} />
       </Route>
       <Route path="/signup" element= {<Signup />}/>
       <Route path="/signin" element = {<Signin />}/>

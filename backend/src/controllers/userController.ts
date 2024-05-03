@@ -53,8 +53,6 @@ export const signin = async (req: Request, res: Response) => {
 export const profile = (req: Request, res: Response) => {
     // make this route use the user auth middleware
     const user = res.locals.user;
-    res.json({
-        msg: "welcome to your profile page!",
-        userData: user,
-    })
+    const userData = user.password
+    res.json(user)
 }

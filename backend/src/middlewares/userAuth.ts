@@ -19,7 +19,7 @@ export const userAuth = (req: Request, res: Response, next: NextFunction) => {
                 const getUserData =  async () => {
                     try {
                         res.locals.user = await UserModel.findById <userInterface> (verified._id);
-                        console.log(res.locals.user);
+                        // console.log(res.locals.user);
                         
                         next();
                     } catch (error) {
