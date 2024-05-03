@@ -1,6 +1,6 @@
 ## Mini Project to practice authentication using jwt and more middlewares
 
-### Tech Stack (TypeScript, Express, React, jwt)
+### Tech Stack (TypeScript, Express, MongoDB, React, jwt)
 
 
 ### Things to cover :
