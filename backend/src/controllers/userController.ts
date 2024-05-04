@@ -3,6 +3,8 @@ import 'dotenv/config'
 
 export const profile = (req: Request, res: Response) => {
     // make this route use the user auth middleware
-    const user = res.locals.user;
-    res.json(user)
+    const user= res.locals.user;
+    const { password: pass, email: email,...rest} = user._doc;
+    //! profile probably does need to send the password and email details to let the user edit them (LATER)
+    res.json(rest)
 }

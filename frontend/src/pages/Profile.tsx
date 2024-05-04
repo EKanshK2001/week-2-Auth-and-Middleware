@@ -6,8 +6,6 @@ import { Navbar } from "../components/Navbar";
 interface IUser {
   _id?: string;
   username: string;
-  email: string;
-  password: string;
   pages: string[];
 }
 
@@ -24,17 +22,14 @@ export const Profile = () => {
   const [user, setUser] = useState<IUser>({
     _id: "",
     username: "",
-    email: "",
-    password: "",
     pages: [],
   });
 
   useEffect(() => {
     axios
-      .get("/api/user/profile/", {
+      .get("http://localhost:3000/api/user/profile/", {
         headers: {
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVrYW5zaCIsImVtYWlsIjoic29tZXRoaW5nQGdtYWlsLmNvbSIsIl9pZCI6IjY2MzMyNWM5YmQzMGUwOTRlYmIyNGZhMiIsImlhdCI6MTcxNDYyODE0NX0.skufBtuu22oKBD9ssTXEhpFuWz1IA7Plt8CysRlJUdc",
+          Authorization: localStorage.getItem("Authorizaiton"),
         },
       })
       .then((response) => {
@@ -54,8 +49,6 @@ export const Profile = () => {
         <div className="">
           <div className="">{user._id}</div>
           <div className="">{user.username}</div>
-          <div className="">{user.email}</div>
-          <div className="">{user.password}</div>
           {/* <div className="">{user.pages.map((page) => <div>{page}</div>)}</div> */}
         </div>
       </div>

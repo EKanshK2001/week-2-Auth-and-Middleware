@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import User from "./routes/User";
-import Pages from "./routes/Pages";
+import User from "./routes/userPages";
+import Pages from "./routes/userAuthPages";
 
 const App = () => {
   return (

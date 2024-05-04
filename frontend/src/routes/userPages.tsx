@@ -10,11 +10,10 @@ const User = () => {
     // app/user/signup -> user signup
     // app/user/signin -> user signin
     // app/user/927491123 -> user profile
-    // 
-
+    
+    //* /* THESE PAGES REQUIRE AUTHENTICATED USER */
     <Routes>
       {/* app/user/ */}
-      {/* //// the problem here is that we need the /user to be private or take the id as input */}
       <Route path="/" element = { <Profile />} />
     </Routes>
   );

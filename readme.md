@@ -25,3 +25,14 @@
 
 ### Run :
 - npm run dev
+
+
+## TODO TOday
+- implement sign in feature
+    - store the access token from the request in the localStorage
+    - use it in every pages request header
+
+- make a way to display current user's data on profile page/all pages
+    - you can introduce recoil here to store the user's data globally
+
+- make multiple new users and surf from their acc
