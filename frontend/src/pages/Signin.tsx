@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import { useSetRecoilState } from "recoil"
 import { userAtom } from "../store/atoms/userAtom"
+import { Button } from "../components/Button"
 
 interface IformData { 
   username: string, 
@@ -58,9 +59,10 @@ export const Signin = () => {
       <Navbar />
       <div className="h-[93%] w-screen bg-neutral-100 flex flex-col  justify-center place-items-center gap-7 ">
         <div className="bg-white py-16 px-12 flex flex-col justify-center place-items-center gap-7 rounded-2xl shadow-xl">
-          <input onChange={handleChange} className="w-[100%] py-3 px-5 outline-none rounded-md bg-neutral-100 shadow-sm" id="username" placeholder="username"/>
-          <input onChange={handleChange} className="w-[100%] py-3 px-5 outline-none rounded-md bg-neutral-100 shadow-sm" id="password" type="password" placeholder="password"/>
-          <button onClick={handleSubmit} type='submit' className="w-[100%] py-3 px-6 bg-sky-100 text-black rounded-xl shadow-sm"> Submit </button>
+          <input onChange={handleChange} className="py-3 px-5 outline-none rounded-md bg-neutral-100 shadow-sm" id="username" placeholder="username"/>
+          <input onChange={handleChange} className="py-3 px-5 outline-none rounded-md bg-neutral-100 shadow-sm" id="password" type="password" placeholder="password"/>
+          {/* <button onClick={handleSubmit} type='submit' className="w-[100%] py-3 px-6 bg-sky-100 text-black rounded-xl shadow-sm"> Submit </button> */}
+          <Button onClick={handleSubmit} text='Submit' />
         </div>
       </div>
     </div>

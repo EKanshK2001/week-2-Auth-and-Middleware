@@ -7,7 +7,15 @@ export const Profile = () => {
   
   const user = useRecoilValue(userAtom);
 
-  if (user) {
+
+  if (!user._id) {
+    return (
+      <div>
+        <Navbar />
+        <div>Please Sign in</div>
+      </div>
+    );
+  } else {
     return (
       <div>
         <Navbar />
