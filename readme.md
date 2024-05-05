@@ -20,14 +20,16 @@
 
 - make multiple new users and surf from their acc with their data
 
-### Bugs : ❌
+#
+
+## Bugs : ❌
 - very slight bug, navbar doesn't update after logout redirect to signin page 
 - navigating back to old pages from browser still show current user's details which goes away at hard refresh
 
 
 #
 
-### Things covered : 🎊
+## Things covered : 🎊
 - Provide a jwt token encoded with some user information (provided at signup or something) ✅
 - Send the token back in every request header that needs the auth/login (use a middleware to authenticate) ✅
 
@@ -47,7 +49,7 @@
 
 #
 
-### Run : 🚀
+## Run : 🚀
 - Run "npm run build" in root folder
 - Go into backend folder and make a new .env file and store the values for:
     - JWT_SECRET, MONGO_URL
