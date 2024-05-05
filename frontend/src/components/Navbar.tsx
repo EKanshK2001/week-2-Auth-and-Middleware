@@ -20,7 +20,7 @@ export const Navbar = () => {
       <div className="w-full p-5 bg-red-200 flex justify-between px-16">
         <div> navbar </div>
         <div className="flex gap-10">
-          <div className="py-2 px-6 border-4"> {user.username} </div>
+          <div className="py-2 px-6 border-4 cursor-pointer" onClick={() =>navigate('/user')}> {user.username} </div>
           <Button text="Logout" onClick={handleLogout} />
         </div>
       </div>
@@ -31,7 +31,7 @@ export const Navbar = () => {
         <div> navbar </div>
         <div className="flex gap-10">
           <Button
-            text="signin"
+            text="Login"
             onClick={() => {
               navigate("/user/signin");
             }}

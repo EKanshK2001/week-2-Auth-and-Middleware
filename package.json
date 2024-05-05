@@ -1,0 +1,16 @@
+{
+  "name": "week-2-2-auth-middlewares",
+  "version": "1.0.0",
+  "description": "- working signup feature\r - working signin feature\r     - store the access token from the request in the localStorage\r     - use it in every pages request header",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd frontend && npm run start\" \"cd backend && npm run start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
