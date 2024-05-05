@@ -2,6 +2,8 @@ import { useState } from "react"
 import { Navbar } from "../components/Navbar"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
+import { useSetRecoilState } from "recoil"
+import { userAtom } from "../store/atoms/userAtom"
 
 interface IformData { 
   username: string, 
@@ -11,6 +13,8 @@ interface IformData {
 export const Signin = () => {
 
   const navigate = useNavigate();
+  const setUser = useSetRecoilState(userAtom);
+
 
   const [formData, setFormData] = useState<IformData>({ username: "", password: ""})
 
@@ -27,17 +31,26 @@ export const Signin = () => {
       if (response.status != 200) {
         console.log("database might be down, try again");
       }
-
+  
       if (response.status == 200) {
-        // console.log(response.data)
         localStorage.setItem("Authorizaiton", "Bearer " + response.data.token);
+  
+        const user = await axios.get('http://localhost:3000/api/user/profile', {
+          headers: {
+            Authorization: localStorage.getItem('Authorizaiton'),
+          }
+        });
+        
+  
+        setUser(user.data); // Update Recoil state with new user data
+        
         navigate('/');
       }
     } catch (error) {
       console.log("error when pinging backend");
-      
     }
   }
+  
   
 
   return (

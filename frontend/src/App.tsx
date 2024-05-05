@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import User from "./routes/userPages";
-import Pages from "./routes/userAuthPages";
+import Pages from "./routes/pages";
 
 const App = () => {
   return (
@@ -10,11 +10,14 @@ const App = () => {
     //? app/user/signup -> user signup
     //TODO app/user/signin -> user signin
     // app/user/927491123 -> user profile
+
+    //app/page
     
 
     <Routes>
       {/* app/ */}
-      <Route path="/*" element= {<Pages />}/>
+      {/* <Route path="/*" element= { <AuthPages /> }/> */}
+      <Route path="/*" element= { <Pages /> }/>
       <Route path="/user/*" element = {<User />} />
     </Routes>
       

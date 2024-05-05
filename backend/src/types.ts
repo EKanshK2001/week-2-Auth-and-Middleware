@@ -1,6 +1,6 @@
 
 
-interface userInterface extends Document {
+interface userInterface {
     _id?: string,
     username : string,
     email: string,
