@@ -1,13 +1,13 @@
 # Mini Project to practice authentication using jwt and more middlewares
 
 ## Tech Stack 🚀💻
-### Backend -> TypeScript, Express, jwt, 
-### Database -> MongoDB, 
+### Backend -> TypeScript, Express, jwt
+### Database -> MongoDB 
 ### Frontend -> React, Recoil
 
 #
 
-## Tests Done: ✅ 👍
+## Tests Done (POSTMAN and FRONTEND): ✅ 👍
 - working signup feature 
 - working signin feature
     - store the access token from the request in the localStorage
