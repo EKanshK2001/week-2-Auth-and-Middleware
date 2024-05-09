@@ -29,7 +29,7 @@
 
 #
 
-## Things covered : 🎊
+## Things learnt : 🎊
 - Provide a jwt token encoded with some user information (provided at signup or something) ✅
 - Send the token back in every request header that needs the auth/login (use a middleware to authenticate) ✅
 
