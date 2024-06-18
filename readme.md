@@ -3,7 +3,7 @@
 ## Tech Stack 🚀💻
 ### Backend -> TypeScript, Express, jwt
 ### Database -> MongoDB 
-### Frontend -> React, Tailwind, Recoil
+### Frontend -> React, Tailwind, Recoil (state manager)
 
 #
 
@@ -23,8 +23,9 @@
 #
 
 ## Bugs : ❌
-- very slight bug, navbar doesn't update after logout redirect to signin page 
-- navigating back to old pages from browser still show current user's details which goes away at hard refresh
+- none for the required functioning.
+- ~very slight bug, navbar doesn't update after logout redirect to signin page~ - FIXED ✅
+- ~navigating back to old pages from browser still show current user's details which goes away at hard refresh~ - FIXED ✅
 
 
 #
@@ -45,7 +46,7 @@
 - Implement the logic to store the access token in the localStorage and use it in subsequent requests ✅
 - Display the user data recieved after login on the profile page (closing browser and no signin) ✅
 
-- as for storing the user data after login, we can do that in a global state manager like recoil ✅
+- Use Recoil to manage user data after login and persists it using the help of recoil-persist library which makes it much easier to persist atom ✅
 
 #
 
