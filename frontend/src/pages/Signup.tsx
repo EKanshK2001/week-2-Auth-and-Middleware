@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Navbar } from "../components/Navbar"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
+import { Button } from "../components/Button"
 
 interface IformData { 
   username: string, 
@@ -30,13 +31,14 @@ export const Signup = () => {
       }
 
       if (response.status == 200) {
-        navigate('/signin');
+        navigate('/user/signin');
       }
     } catch (error) {
       console.log("error when pinging backend");
       
     }
   }
+
   
 
   return (
@@ -47,7 +49,9 @@ export const Signup = () => {
           <input onChange={handleChange} className="w-[100%] py-3 px-5 outline-none rounded-md bg-neutral-100 shadow-sm" id="username" placeholder="username"/>
           <input onChange={handleChange} className="w-[100%] py-3 px-5 outline-none rounded-md bg-neutral-100 shadow-sm" id="email" placeholder="email@gmail.com"/>
           <input onChange={handleChange} className="w-[100%] py-3 px-5 outline-none rounded-md bg-neutral-100 shadow-sm" id="password" type="password" placeholder="password"/>
-          <button onClick={handleSubmit} type='submit' className="w-[100%] py-3 px-6 bg-sky-100 text-black rounded-xl shadow-sm"> Submit </button>
+          {/* <button onClick={handleSubmit} type='submit' className="w-[100%] py-3 px-6 bg-sky-100 text-black rounded-xl shadow-sm"> Submit </button> */}
+          <Button onClick={handleSubmit} text='Submit'/>
+          <div className="w-[100%] py-3 px-5 text-sm underline cursor-pointer text-center" onClick={() => {navigate('/user/signin')}}>Signin instead?</div>
         </div>
       </div>
     </div>

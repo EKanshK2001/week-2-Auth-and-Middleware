@@ -3,7 +3,7 @@
 ## Tech Stack 🚀💻
 ### Backend -> TypeScript, Express, jwt
 ### Database -> MongoDB 
-### Frontend -> React, Recoil
+### Frontend -> React, Tailwind, Recoil
 
 #
 
