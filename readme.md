@@ -51,8 +51,9 @@
 #
 
 ## Run : 🚀
-- Run "npm run build" in root folder
+- Run "npm install" in root folder
 - Go into backend folder and make a new .env file and store the values for:
     - JWT_SECRET, MONGO_URL
+- Run "npm run build" in root folder
 - Run "npm run start" in root folder
 
